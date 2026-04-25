@@ -57,7 +57,7 @@ egress_rules = ["all-all"]
 egress_cidr_blocks = ["0.0.0.0/0"]
 }
 
-module "alb" {
+module "blog_alb" {
   source = "terraform-aws-modules/alb/aws"
 
   name    = "blog-alb"
@@ -77,7 +77,7 @@ module "alb" {
   }
 
   tags = {
-    Environment = "Development"
+    Environment = "dev"
   }
 }
 
